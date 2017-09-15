@@ -22,7 +22,10 @@ class EllipticCurve:
         self.b = b
         self.field = field_size
 
-        self.discriminant = (-16 * (4 * pow(a, 3) + 27 * pow(b, 2))) % self.field
+        discriminant = modulo_multiply(-16, (modulo_multiply(4, modulo_pow(a, 3, self.field), self.field) +
+                                             modulo_multiply(27, modulo_pow(b, 2, self.field), self.field)), self.field)
+
+        self.discriminant = discriminant % self.field
 
         if not self.is_group():
             raise Exception("The curve does not satisfy condition for a group")
@@ -72,7 +75,8 @@ class EllipticCurve:
         plt.grid()
 
         for point in annotated_points:
-            ax.annotate(point.name, (point.x, point.y), xytext=(point.x + 1, point.y + 0.5),
+            ax.annotate("{} ({}, {})".format(point.name, point.x, point.y),
+                        (point.x, point.y), xytext=(point.x + 1.5, point.y + 0.5),
                         arrowprops=dict(facecolor='black', shrink=0.05))
         plt.show()
 
