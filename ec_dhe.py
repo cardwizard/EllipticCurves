@@ -42,7 +42,6 @@ if __name__ == '__main__':
     bob_pub = bob_private_key * Generator
     bob_pub.name = "Bob Public Key"
 
-
     shared_secret_bob = alice_pub * bob_private_key
     shared_secret_alice = bob_pub * alice_private_key
 
