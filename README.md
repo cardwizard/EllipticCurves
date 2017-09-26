@@ -31,7 +31,7 @@ ecc.plot_curve()
 
 
 
-![png](demo/output_3_1.png)
+![png](Demo/output_3_1.png)
 
 
 
@@ -47,7 +47,7 @@ ecc.plot_points([Generator])
 ```
 
 
-![png](demo/output_5_0.png)
+![png](Demo/output_5_0.png)
 
 
 
@@ -65,7 +65,7 @@ ecc.plot_points([G2])
     
 
 
-![png](demo/output_6_1.png)
+![png](Demo/output_6_1.png)
 
 
 
@@ -111,7 +111,7 @@ ecc.plot_points([Generator, alice_pub, bob_pub])
 ```
 
 
-![png](demo/output_10_0.png)
+![png](Demo/output_10_0.png)
 
 
 
@@ -150,5 +150,5 @@ shared_secret_alice.name = "Shared Secret"
 
 ecc.plot_points([Generator, alice_pub, bob_pub, shared_secret_alice])
 ```
-![png](demo/output_14_0.png)
+![png](Demo/output_14_0.png)
 
