@@ -1,4 +1,4 @@
-#   Primary Author: Aadesh M Bagmar <aadesh@soroco.com>
+#   Primary Author: Aadesh M Bagmar <aadeshbagmar@gmail.com>
 #
 #   Purpose: Elliptic Curve Cryptography main class
 
